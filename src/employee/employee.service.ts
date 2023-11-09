@@ -39,8 +39,12 @@ export class EmployeeService {
       this.employees.push(empleado);
     }
 
-    getEmployee (){
+    getEmployees (){
       return this.employees;
+    }
+
+    getEmployee(id: number) {
+      return this.employees.find((e) => e.id == id);
     }
 
     agregarEmpleado (empleadoModel: EmpleadoModel){
